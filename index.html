@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mr.Review</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">MR.Review</h2>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="add.html">Add</a></li>
+    <li><a href="view.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+
+  <div class="user-box">
+    <span id="userDisplay"></span>
+    <button id="logoutBtn" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="slider" id="slider"></div>
+</section>
+
+<!-- LATEST REVIEWS -->
+<section class="movies-section">
+  <h2>🔥 Latest Reviews</h2>
+  <div id="homeReviews" class="movies-grid"></div>
+</section>
+
+<!-- ACTORS -->
+<section class="movies-section">
+  <h2>⭐ Popular Actors & Actresses</h2>
+
+  <div class="actors-slider">
+    <div class="actors-row">
+
+      <div class="actor-card" onclick="showMovies('ajith')">
+        <img src="ajith.jpg">
+        <p>Ajith</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('vijay')">
+        <img src="vijay.jpg">
+        <p>Vijay</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('suriya')">
+        <img src="suriya.jpg">
+        <p>Suriya</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('tom')">
+        <img src="tom cruise.jpg">
+        <p>Tom Cruise</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('rajini')">
+        <img src="rajinikanth.jpg">
+        <p>Rajinikanth</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('dhanush')">
+        <img src="dhanush.jpg">
+        <p>Dhanush</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('nayanthara')">
+        <img src="nayanthara.jpg">
+        <p>Nayanthara</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('trisha')">
+        <img src="trisha.jpg">
+        <p>Trisha</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('deepika')">
+        <img src="deepika.jpg">
+        <p>Deepika</p>
+      </div>
+
+      <div class="actor-card" onclick="showMovies('alia')">
+        <img src="aliabhatt.webp">
+        <p>Alia Bhatt</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<div class="search-box">
+  <input type="text" id="searchMovie" placeholder="Search movie..." onkeyup="showSuggestions()">
+  <button onclick="searchMovie()">Search</button>
+
+  <div id="suggestions" class="suggestions-box"></div>
+</div>
+
+<!-- SEARCH RESULT -->
+<div id="apiResult" class="movies-grid"></div>
+
+<!-- 🎬 ACTOR MOVIE MODAL -->
+<div id="movieModal" class="modal">
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">✖</span>
+
+    <h2 id="actorTitle"></h2>
+
+    <div id="movieList"></div>
+
+  </div>
+</div>
+
+<!-- 🎬 TRAILER MODAL (UPDATED ✅) -->
+<div id="trailerModal" class="trailer-modal">
+  <div class="trailer-content">
+
+    <span class="close-trailer" onclick="closeTrailer()">✖</span>
+
+    <iframe id="trailerFrame" frameborder="0" allowfullscreen></iframe>
+
+    <!-- 🔥 NEW BUTTON -->
+    <a id="ytBtn" target="_blank" class="yt-button">
+      ▶ Watch on YouTube
+    </a>
+
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>

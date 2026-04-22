@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Review</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2 class="logo">Mr.Review</h2>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="view.html">Reviews</a></li>
+  </ul>
+</nav>
+
+<div class="form-box">
+  <h2>Add Review</h2>
+
+  <input id="movieName" placeholder="Enter Movie Name">
+
+  <select id="rating">
+    <option value="">Select Rating</option>
+    <option value="1">⭐ 1</option>
+    <option value="2">⭐⭐ 2</option>
+    <option value="3">⭐⭐⭐ 3</option>
+    <option value="4">⭐⭐⭐⭐ 4</option>
+    <option value="5">⭐⭐⭐⭐⭐ 5</option>
+  </select>
+
+  <textarea id="review" placeholder="Write your review..."></textarea>
+
+  <button onclick="addReview()">Submit Review</button>
+
+  <p id="error"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
